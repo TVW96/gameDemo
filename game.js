@@ -36,7 +36,7 @@ loadSprite('bg', 'gDTeISE.png')
 
 
 scene("game", ({ level , score }) => {
-    layers(['bg', 'obj', 'ui'], 'obj')
+    layers(['bg', 'obj', 'ui'], 'obj' )
 
     const maps = [
         [
@@ -60,12 +60,12 @@ scene("game", ({ level , score }) => {
         [
             'yccccccccccccccccw',
             'a                b',
+            'a      %%         b',
+            'a                b',
+            'a        $      b',
             'a                b',
             'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
+            'a       %         b',
             'a                b',
             ')    }     }     )',
             'a                b',
