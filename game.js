@@ -32,7 +32,7 @@ loadSprite('stairs', 'xBlzHE3.png')
 loadSprite('grass', 'cNCOZNY.png')
 loadSprite('hole', 'MvzkPdq.png')
 loadSprite('sword', 'EyQj3UT.png')
-loadSprite('bg', 'gDTeISE.png')
+loadSprite('bg', 'yEqPBT5.jpg')
 
 
 scene("game", ({ level , score }) => {
@@ -40,40 +40,40 @@ scene("game", ({ level , score }) => {
 
     const maps = [
         [
-            'ycccccc^cccccccccw',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a                b',
-            'a       (        b',
-            '%                b',
-            'a     (          b',
-            'a   *            b',
-            'a                b',
-            'xdd)dd)ddddddddddz',
+            'ycccccc^ccccccccccccccw',
+            'a                     b',
+            'a   *                 b',
+            'a       (             b',
+            'a           *   (     b',
+            'a        (            b',
+            'a    *                b',
+            'a                     b',
+            'a        *     (      b',
+            'a    (                b',
+            'a        *            b',
+            '%                     b',
+            'a     $               b',
+            'a              *      b',
+            'a              (      b',
+            'xdd)dd)dddddddddddddddz',
         ], 
         [
-            'yccccccccccccccccw',
-            'a                b',
-            'a      %%         b',
-            'a                b',
-            'a        $      b',
-            'a                b',
-            'a                b',
-            'a       %         b',
-            'a                b',
-            ')    }     }     )',
-            'a                b',
-            '%                b',
-            'a      $         b',
-            'a   }    }       )',
-            'a                b',
-            'xdd)ddddddddd)dddz',
+            'ycccccccccccccccccccccw',
+            'a                $    b',
+            'a  }                  b',
+            'a         }           b',
+            'a  (          (       b',
+            'a                     b',
+            'a      (         }    b',
+            'a                     b',
+            'a                     b',
+            ')    }      }         )',
+            'a                     b',
+            '%              (      b',
+            'a                     b',
+            'a   }     }        }  )',
+            'a                     b',
+            'xdd)ddddddddd)ddddddddz',
         ]
         
     ]
@@ -105,7 +105,7 @@ scene("game", ({ level , score }) => {
 
     const scoreLabel = add([
         text('0'),
-        pos(400,450),
+        pos(1400,100),
         layer('ui'),
         {
             value: score,
@@ -113,7 +113,7 @@ scene("game", ({ level , score }) => {
         scale(2)
     ])
 
-    add([text('level ' + parseInt(level + 1)), pos(400, 485), scale(2)])
+    add([text('level ' + parseInt(level + 1)), pos(1350, 125), scale(2)])
 
     const player = add([
         sprite('link-going-right'),
@@ -188,7 +188,7 @@ scene("game", ({ level , score }) => {
 
     const SLICER_SPEED = 200
 
-    action('slicer', (s) => {
+    action('slicer',  (s) => {
         s.move(s.dir * SLICER_SPEED, 0)
     })
 
